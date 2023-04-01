@@ -9,8 +9,9 @@ import 'package:flutter/material.dart';
 -curly brackets
  */
 String getFullName(String firstName, String lastName){
-
-  return  firstName + ' ' + lastName; 
+//The idea of prefixing the variables with a dollar sign is known as string formatting
+//This allows us to directly concatenate variables without doing it the same old way
+  return  '$firstName $lastName';
 }
  
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(getFullName('foo', 'Bar'));
+    print(getFullName('foo','Bar'));
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
