@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 
+//Functions are a grouping that form a piece of code that perform a specific task based on defined logic
+//Our function here just adds two names then concatenates them to make a full name 
+/*Properties of a function
+-datatype of a function
+-function name
+-brackets with parameters if any
+-curly brackets
+ */
+String getFullName(String firstName, String lastName){
 
+  return  firstName + ' ' + lastName; 
+}
+ 
 void main() {
-  final name = "Alex";
   runApp(const MyApp());
 }
 
@@ -12,6 +23,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print(getFullName('foo', 'Bar'));
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
