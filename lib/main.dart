@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+const age = 27; //Constant values are values that do not change during both compile and run time 
+const newAge = age * 27;
 void main() {
+  final name = 'foo';
   runApp(const MyApp());
 }
 
