@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
 
-//Functions are a grouping that form a piece of code that perform a specific task based on defined logic
-//Our function here just adds two names then concatenates them to make a full name 
-/*Properties of a function
--datatype of a function
--function name
--brackets with parameters if any
--curly brackets
- */
-String getFullName(String firstName, String lastName){
-//The idea of prefixing the variables with a dollar sign is known as string formatting
-//This allows us to directly concatenate variables without doing it the same old way
-  return  '$firstName $lastName';
+//Functions do not have to always return something
+//Such functions that do a particular task but return nothing are called void functions
+//This simply means that the function returns nothing
+void printMyName(){
+
 }
- 
 void main() {
   runApp(const MyApp());
 }
