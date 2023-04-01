@@ -2,19 +2,7 @@ import 'package:flutter/material.dart';
 
 
 void main() {
-  /*A variable is basically anything that stores values that can be changed during a program depending on the data type
-  In our case, we create a variable called name using the var key word as prefix to show that we are creating a variable
-  Variables work in such a way that they borrow space from memory, the memory has tiny boxes each with its own
-  address and so the program asks for some space in memory which has an address and replaces the address
-  with the variable name, the value assigned to the variable is then stored in this space in memory.
-  The value of the variable in memory can be changed at any moment wanted during the program ,
-  basing on the name itself (variable == Vary) so which means that values in it can actually vary hence its name
-  Another thing to note is that here we are in a function and variables in functions are said to exist
-  in the local scope.A scope is a container for variables so variables in functions are in the local
-  container for variables
-  */
-  var name = 'Kiima';//Assign value to variable 'name' with var key word e.g var name = "Alex". This however doesnot specify data type 
-  name = 'Fadhil';// The value of the above variable can later on be changed as seen here 
+  final name = "Alex";
   runApp(const MyApp());
 }
 
