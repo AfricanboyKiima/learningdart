@@ -10,6 +10,9 @@ void test(){//Function to return nothing
 final name = 'Foo';
 if (name == 'Foo'){
   print("Yes this is foo");
+  print("Yes this is foo");
+  print("Yes this is foo");
+      
 }else{
   print("You're mad, this isn't foo man");
 }
