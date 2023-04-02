@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
-//Functions do not have to always return something
-//Such functions that do a particular task but return nothing are called void functions
-//This simply means that the function returns nothing
-void printMyName(){
 
-}
+
 void main() {
   runApp(const MyApp());
+}
+//This function is going to contain code to be tested 
+void test(){//Function to return nothing
+final name = 'Foo';
+if (name == 'Foo'){
+  print("Yes this is foo");
+}else{
+  print("You're mad, this isn't foo man");
+}
+
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +22,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(getFullName('foo','Bar'));
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
