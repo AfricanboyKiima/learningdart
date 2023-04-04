@@ -6,9 +6,18 @@ void main() {
   runApp(const MyApp());
 }
 
-//Looking at operators now
+//Looking at operators now*
+//Been able to learn about kinds of operator i.e 
+//Infix,prefix and suffix operators
+//Infix operators are operators that are basically between two parameters or arguments such as 'age * 2' OR 'age + 3' The * and + are found between parameters
+//Prefix operators are operators that come before anything such as '--age'
+//Suffix operators are those that come after such as 'age++'
 void testin(){
-
+final age = 20;
+final halfOfAge = age/2;
+final doubleAge = age * 2;
+print(doubleAge);
+print(halfOfAge);
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
