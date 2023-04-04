@@ -5,19 +5,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-//This function is going to contain code to be tested 
-void test(){//Function to return nothing
-final name = 'Foo';
-if (name == 'Foo'){
-  print("Yes this is foo");
-  print("Yes this is foo");
-  print("Yes this is foo");
-      
-}else{
-  print("You're mad, this isn't foo man");
-}
 
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -25,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
