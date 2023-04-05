@@ -6,10 +6,15 @@ void main() {
 
 //Now looking at lists in dart
 //These are a datatype that has elements positioned in terms of indexes with the first element having 
-//...its index as 0
+//...its index as 0. It defines a number of attributes and methods called xtics and actions respectively
 void test(){
- final names =  ['foo','Bar','Baz'];
+ var names =  ['foo','Bar','Baz'];
  final foo = names[0];
+ print(foo);
+ //Acces length
+ names.length;//This will return the length of the list
+ //Add item to list
+ names.add("Anything");//The add() method allows us to add items to the list already existing and defined(names)
 }
 
 class MyApp extends StatelessWidget {
