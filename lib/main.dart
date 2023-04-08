@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-//Looking at sets. When compared to lists,they store unique values,while list store homogeneous things
+//Sets do not have duplicate values 
 void test(){
-  var names = {'foo','Samy','John'};//A set is a datatype containing values that don't change i.e unique values just like columns in sql defined as UNIQUE constraints 
-  names.add('Jamillah');
-  names.add('ZamZam');
-  names.add('Johnson');
+  //This set is composed of integers only that cant be duplicated
+  var integers = {1,2};
+  integers;
+  //Set of objects, this is because it is composed of different elements of various data types
+  var objects = {"Kiima",1,2.0};
+  objects;
+  //Set of strings
+  var strings = {"fadhil","Kiima"};
+  strings;
+  //Set of floating point numbers
+  var test_floats = {2.3,5.7};
+  test_floats;
 }
 
 class MyApp extends StatelessWidget {
