@@ -25,8 +25,14 @@ void test(){
   we can do this without being too versbose throught cherrypicking using ?? operators
   The operator work in such a way that they choose the first non null value.
   i.e const nonNullValue = firstName ?? middleName ?? lastName
-  The operator is an infix one so it says if the first va
+  The operator is an infix one so it says if the value on my left is null, i am going to pick the one on my right
+  SO it says that if the value on my left is null, Im choosing the one on the right and it will continue in
+  that state until it finds one that is not null,in case there are no more values,it stops I think.
   */
+  //SOLUTION
+  //it says if the value on my left is null(nothing), I choose the value on my right so it choosed those values
+  //...that are not nullable or that have values in them 
+  const nonNullValues = firstName ?? middleName ?? lastName ; 
 }
 
 class MyApp extends StatelessWidget {
