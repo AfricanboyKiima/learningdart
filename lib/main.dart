@@ -9,25 +9,24 @@ i.e String? name = null; OR String? name = "foo";
 then name = null; All this is accepted
 It's important to note that it is possible for any data type to be nullified such as a list 
  */
+//Cherrypicking non null values
 void test(){
-//a list of strings, know that the question mark nullifies the list which means the list may contain nothing
-List<String>? names = ["fadhil","samuel","Musa"];
-names = null;
-//A thing to note here is that just because a datatype is nullable does not mean it can't contain a value
-//..when it is nullable, it simply means it may or may not contain a value*
-List<int>? numbers = [1,2,3,4];
-//The above code shows that the list is nullable, however we see a list equated to it containing integer numbers
-//The following line equates the same list to null and it accepts, the reason for this is that since we had already
-//..declared the list as nullable through the quesiton mark,we can then later on equate it to null much as we 
-//..had initially equated it to a list of numbers this means that making a variable or datatype nullable is through
-//ensuring that we just suffix the variable's datatype with a question mark to tell dart that it's nullable 
-numbers = null;
-List <String>? namess = [];
-namess = null;
-
-//The list is optional
-//The strings that the container object(list) contains are also optional
-List<String?>? items = ["Books","Pencils","Pens","Soap",null];
+  const String? firstName = null;
+  const String? middleName = "Bar";
+  const String? lastName = "Baz";
+  if (firstName != null){
+    print("firstname is the first non null value");
+  }else if(middleName != null){
+    print("Middle name is the first non null value");
+  }else if(lastName != null){
+    print("Lastname is the first non null value");
+  }
+  /*The code above is verbose, all we want is to checkkout for the first non null value amongst the variables,
+  we can do this without being too versbose throught cherrypicking using ?? operators
+  The operator work in such a way that they choose the first non null value.
+  i.e const nonNullValue = firstName ?? middleName ?? lastName
+  The operator is an infix one so it says if the first va
+  */
 }
 
 class MyApp extends StatelessWidget {
