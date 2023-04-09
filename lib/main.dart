@@ -3,20 +3,31 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-//Sets do not have duplicate values 
+//Sound Null safety is a feature that allows us to say that a variable is basically equal to nothing
+/*We achieve sound null safety in dart by prefixing a variable's datatype with a question mark
+i.e String? name = null; OR String? name = "foo";
+then name = null; All this is accepted
+It's important to note that it is possible for any data type to be nullified such as a list 
+ */
 void test(){
-  //This set is composed of integers only that cant be duplicated
-  var integers = {1,2};
-  integers;
-  //Set of objects, this is because it is composed of different elements of various data types
-  var objects = {"Kiima",1,2.0};
-  objects;
-  //Set of strings
-  var strings = {"fadhil","Kiima"};
-  strings;
-  //Set of floating point numbers
-  var test_floats = {2.3,5.7};
-  test_floats;
+//a list of strings, know that the question mark nullifies the list which means the list may contain nothing
+List<String>? names = ["fadhil","samuel","Musa"];
+names = null;
+//A thing to note here is that just because a datatype is nullable does not mean it can't contain a value
+//..when it is nullable, it simply means it may or may not contain a value*
+List<int>? numbers = [1,2,3,4];
+//The above code shows that the list is nullable, however we see a list equated to it containing integer numbers
+//The following line equates the same list to null and it accepts, the reason for this is that since we had already
+//..declared the list as nullable through the quesiton mark,we can then later on equate it to null much as we 
+//..had initially equated it to a list of numbers this means that making a variable or datatype nullable is through
+//ensuring that we just suffix the variable's datatype with a question mark to tell dart that it's nullable 
+numbers = null;
+List <String>? namess = [];
+namess = null;
+
+//The list is optional
+//The strings that the container object(list) contains are also optional
+List<String?>? items = ["Books","Pencils","Pens","Soap",null];
 }
 
 class MyApp extends StatelessWidget {
