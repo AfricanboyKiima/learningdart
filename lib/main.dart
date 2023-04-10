@@ -4,16 +4,13 @@ void main() {
   runApp(const MyApp());
 }
 
-//Null aware operator(??=)
-//The operator is used to resolve a variable to make sure it isnt nullable
-/* The NULL AWARE operator is used to resolve a variable to make sure it is not nullable*/ 
-//It assigns a another value to a variable in case the variable is null as seen below
-void test(String? firstName, String? middleName, String? lastName){
-  String? name = firstName;//Here since our test function call passes a value to the firstName parameter of the test function, that means that our variable name is not null
-  name ??= lastName;// this means that assign the value in lastname if the value in the name variable is null
-  name ??= middleName;//This means assign the value in the middleName variable to the name variable in case the name variable value is null
-
+//Conditional invocation using the (?.) operator
+void test(){
+  List <String>? names = null;
+  final numberOfNames = names.length;//So where we can't access the length attribute
+  //because the list is null(it is being accessed unconditionally)...Don't know what accessing unconditionally means but we shall understand along the way.
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,7 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test("farouk","John",null);
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
