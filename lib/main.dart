@@ -5,10 +5,24 @@ void main() {
 }
 
 //Conditional invocation using the (?.) operator
-void test(){
-  List <String>? names = null;
-  final numberOfNames = names.length;//So where we can't access the length attribute
-  //because the list is null(it is being accessed unconditionally)...Don't know what accessing unconditionally means but we shall understand along the way.
+void test(List<String>? names){
+  final numberOfNames = names.length;
+}
+/*This is called type promotion. It assigns the length of the list to the length variable if the 
+list isn't equal to nothing(null)
+This is because with the presence of a list, we can then be able to know its length even if out list is empty,
+atleast it exists as it's not null and therefore it might be equal to zero in terms of length as it contains nothing
+*/
+void testing(List<String>? names){
+  /*The take away here is that we are able to know the length of a list if we have it that means that we should
+  not have a list equal to nothing as a value cause we can't know the length of nothing. So in the following
+  variable, we assign the length of our list to the variable length if and only if the the list isn't null or
+  nothing i.e our variable is not equal to a list nothing(our variable is null)
+  */
+  if (names != null){
+    final numberOfNames = names.length;
+  }
+
 }
 
 
