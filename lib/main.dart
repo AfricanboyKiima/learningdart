@@ -3,28 +3,22 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-
-//Conditional invocation using the (?.) operator
-void test(List<String>? names){
-  final numberOfNames = names.length;
-}
-/*This is called type promotion. It assigns the length of the list to the length variable if the 
-list isn't equal to nothing(null)
-This is because with the presence of a list, we can then be able to know its length even if out list is empty,
-atleast it exists as it's not null and therefore it might be equal to zero in terms of length as it contains nothing
+/*Condition invocation is a feature in dart 
+It allows us to call an attribute or method of an optional if the optional's value is present
+We are able to know that a variable is optional by suffixing its datatype with a ?, so condition invocation
+allows us to call the attribute or method of an optional if its value is present
 */
-void testing(List<String>? names){
-  /*The take away here is that we are able to know the length of a list if we have it that means that we should
-  not have a list equal to nothing as a value cause we can't know the length of nothing. So in the following
-  variable, we assign the length of our list to the variable length if and only if the the list isn't null or
-  nothing i.e our variable is not equal to a list nothing(our variable is null)
-  */
+
+//names is an optional variable as seen by its datatype being suffixed by a ?
+void test(List<String>? names){
+  int length  = 0;
   if (names != null){
-    final numberOfNames = names.length;
+    //The reason we are giving this is that we are able to access names' attributes and methods i.e length in
+    //this case because our optional names has a value. If it doesn't, we can't access the attributes and methods
+    //This is the old way of accessing objects of the optional object, the real way is using the ?. operator 
+    length = names.length;
   }
-
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -32,7 +26,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
+    //test(["kiima","samy","john","fadhil"]);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
