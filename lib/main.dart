@@ -3,36 +3,16 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-//Sound Null safety is a feature that allows us to say that a variable is basically equal to nothing
-/*We achieve sound null safety in dart by prefixing a variable's datatype with a question mark
-i.e String? name = null; OR String? name = "foo";
-then name = null; All this is accepted
-It's important to note that it is possible for any data type to be nullified such as a list 
- */
-//Cherrypicking non null values
-void test(){
-  const String? firstName = null;
-  const String? middleName = "Bar";
-  const String? lastName = "Baz";
-  if (firstName != null){
-    print("firstname is the first non null value");
-  }else if(middleName != null){
-    print("Middle name is the first non null value");
-  }else if(lastName != null){
-    print("Lastname is the first non null value");
-  }
-  /*The code above is verbose, all we want is to checkkout for the first non null value amongst the variables,
-  we can do this without being too versbose throught cherrypicking using ?? operators
-  The operator work in such a way that they choose the first non null value.
-  i.e const nonNullValue = firstName ?? middleName ?? lastName
-  The operator is an infix one so it says if the value on my left is null, i am going to pick the one on my right
-  SO it says that if the value on my left is null, Im choosing the one on the right and it will continue in
-  that state until it finds one that is not null,in case there are no more values,it stops I think.
-  */
-  //SOLUTION
-  //it says if the value on my left is null(nothing), I choose the value on my right so it choosed those values
-  //...that are not nullable or that have values in them 
-  const nonNullValues = firstName ?? middleName ?? lastName ; 
+
+//Null aware operator(??=)
+//The operator is used to resolve a variable to make sure it isnt nullable
+/* The NULL AWARE operator is used to resolve a variable to make sure it is not nullable*/ 
+//It assigns a another value to a variable in case the variable is null as seen below
+void test(String? firstName, String? middleName, String? lastName){
+  String? name = firstName;//Here since our test function call passes a value to the firstName parameter of the test function, that means that our variable name is not null
+  name ??= lastName;// this means that assign the value in lastname if the value in the name variable is null
+  name ??= middleName;//This means assign the value in the middleName variable to the name variable in case the name variable value is null
+
 }
 
 class MyApp extends StatelessWidget {
@@ -41,6 +21,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    test("farouk","John",null);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
