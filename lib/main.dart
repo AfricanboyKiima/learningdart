@@ -3,22 +3,37 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-/*Condition invocation is a feature in dart 
-It allows us to call an attribute or method of an optional if the optional's value is present
-We are able to know that a variable is optional by suffixing its datatype with a ?, so condition invocation
-allows us to call the attribute or method of an optional if its value is present
-*/
-
-//names is an optional variable as seen by its datatype being suffixed by a ?
-void test(List<String>? names){
-  int length  = 0;
-  if (names != null){
-    //The reason we are giving this is that we are able to access names' attributes and methods i.e length in
-    //this case because our optional names has a value. If it doesn't, we can't access the attributes and methods
-    //This is the old way of accessing objects of the optional object, the real way is using the ?. operator 
-    length = names.length;
-  }
+//UNDERSTANDING IT
+//OLD WAY OF DOING THIS
+/*
+void test(List<int>? ages){//represents an optional list of integer numbers, the numbers are actually ages of random individuals
+  if (ages != null){}
+  length = ages.length;
 }
+int lengthOfListOfAges = ages?.length//We said that the conditional invocation is there to 
+access the attribute or method of an object if it is not null i.e it has a value and therefore not nullable 
+In the preceding code,the object's length is not accessed since we haven't declare whether or not it has a value so the solution would be:
+ages = [23,56,18,61] As seen, the object has values and therefore not null as declared in this line of code, this simply means that we can access the attributes and methods of the object, our
+object being a list that defines length and add() attribute and method respectively
+void test(List<String>? names){
+  int? length = null;
+  if (names != null){//This means names is not null hence has a value
+    length = names.length;//If names isn't null then we invoke the optional's length attribute through itself
+    //.. and the results are assigned to the length variable
+  }else{
+    length = 0;//Otherwise, length becomes equal to zero when names is nullable since we would not be having
+    //a list from which we could count the length
+  }*/
+  //NEW WAY 
+  void test(List<String>? names){
+    //Here we are achieving the same results as in the above code through use of the ?. condition invocation
+
+    final length = names?.length;/*suffixing the operator before the optional
+    variable means the operator checks for its nullability if it isn't null(its present) if invokes
+    the length attributes defined in the optional's class and assigns the results found in it to the 
+    length variable so the ?. operator is used to invoke a property or method of an optional if it isn't null.
+    */ 
+  }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
