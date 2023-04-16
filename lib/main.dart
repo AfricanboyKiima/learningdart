@@ -19,7 +19,14 @@ void breathe(){
 }
 
 void test(){
-  }
+  /*With object oriented programming, when an object is instantiated by a class, it accesses the class
+  attributes and methods and this is so awesome man. Object Oriented Programming is so awesome man and I really
+  love using it.
+  */
+  final person = Person();//Instantiated object from the Person class
+  person.run();//Accessed method run defined in person class
+  person.breathe();//Accessed breathe method from the person class 
+    }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
