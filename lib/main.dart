@@ -4,23 +4,9 @@ void main() {
   runApp(const MyApp());
 }
 
-//A class is a way of grouping related things together here we group attributes and methods together
-//The attributes are characteristics of the object(Person) and the methods are actions performed on the
-//..object
-class Person{
-//The actions that a person does may include 
-void run(){
-//A person can run
-}
-void breathe(){
-//A person can also breathe
-//These are methods or actions that a person can perform and in OOP these are performed against the object itself
-}
-}
 
 void test(){
-  Person.breathe();//Can't access the method from the class level
-  //Understood that we can't access an instance method in dart at the class level as seen
+  
     }
 
 class MyApp extends StatelessWidget {
