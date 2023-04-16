@@ -5,14 +5,19 @@ void main() {
 }
 
 class Person{
-  //We create constructors in dart using the class name
   final String name;
+
+  //We create constructors in dart using the class name
   Person(this.name);//Created constructor method to create the attribute of each and every instance of the class²
   
+  void printName(){
+    print(name);
+  }
 }
 
 void test(){
-
+var person = Person("Kiima");//Instantiated object from person class
+person.printName();//Accessed method defined in person class that prints name of a person
     }
 
 class MyApp extends StatelessWidget {
