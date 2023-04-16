@@ -4,9 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
+class Person{
+  //We create constructors in dart using the class name
+  final String name;
+  Person(this.name);//Created constructor method to create the attribute of each and every instance of the class²
+  
+}
 
 void test(){
-  
+
     }
 
 class MyApp extends StatelessWidget {
