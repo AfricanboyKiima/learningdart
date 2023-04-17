@@ -4,19 +4,29 @@ void main() {
   runApp(const MyApp());
 }
 
+
+//Looking at inheritance in OOP dart
+class Livingthing{
+  void breathe(){
+    print("Living thing is breathing")
+  }
+}
+
 class Person{
   final String name;
+  final String surname;
+  final int age;
 
   //We create constructors in dart using the class name
-  Person(this.name);//Created constructor method to create the attribute of each and every instance of the class²
-  
+  Person(this.name,this.surname,this.age);//Created constructor method to create the attribute of each and every instance of the class²
+
   void printName(){
     print(name);
   }
 }
 
 void test(){
-var person = Person("Kiima");//Instantiated object from person class
+var person = Person("Kiima","Fadhil",35);//Instantiated object from person class
 person.printName();//Accessed method defined in person class that prints name of a person
     }
 
