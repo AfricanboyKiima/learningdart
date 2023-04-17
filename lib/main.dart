@@ -5,14 +5,19 @@ void main() {
 }
 
 
-//Looking at inheritance in OOP dart
-class Livingthing{
-  //Defined attributes and methods of the class
+//Abstract classes are classes that can't be instantiated. They define an interface and its implementation
+//They can however be accessed by fellow classes therefore inheriting their functionalities i.e attributes and methods
+abstract class Livingthing{
+
+
+//Defined fields 
   String name;
   String habitat;
   String type;
-
+//Fields as seen above
   Livingthing(this.name,this.habitat, this.type);//Constructor of the class 
+
+
   void breathe(){
     print("Living thing is breathing");
   }
