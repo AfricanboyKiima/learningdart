@@ -7,6 +7,12 @@ void main() {
 
 //Looking at inheritance in OOP dart
 class Livingthing{
+  //Defined attributes and methods of the class
+  String name;
+  String habitat;
+  String type;
+
+  Livingthing(this.name,this.habitat, this.type);//Constructor of the class 
   void breathe(){
     print("Living thing is breathing");
   }
