@@ -34,8 +34,9 @@ class Person{
 }
 
 void test(){
-var person = Person("Kiima","Fadhil",35);//Instantiated object from person class
-person.printName();//Accessed method defined in person class that prints name of a person
+  final fluffer = Cat();
+  fluffer.breathe();
+  fluffer.move();
     }
 
 class MyApp extends StatelessWidget {
