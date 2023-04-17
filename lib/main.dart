@@ -8,8 +8,16 @@ void main() {
 //Looking at inheritance in OOP dart
 class Livingthing{
   void breathe(){
-    print("Living thing is breathing")
+    print("Living thing is breathing");
   }
+  void move(){
+    print("Moving");
+  }
+}
+//We can inherit the functionality of the livingthing class since cats are livingthings too
+//To do that we inherit from a class using the 'extends' keyword
+class Cat extends Livingthing{//Inheritance
+  
 }
 
 class Person{
