@@ -4,51 +4,13 @@ void main() {
   runApp(const MyApp());
 }
 
-
-//Abstract classes are classes that can't be instantiated. They define an interface and its implementation
-//They can however be accessed by fellow classes therefore inheriting their functionalities i.e attributes and methods
-abstract class Livingthing{
-
-
-//Defined fields 
-  String name;
-  String habitat;
-  String type;
-//Fields as seen above
-  Livingthing(this.name,this.habitat, this.type);//Constructor of the class 
-
-
-  void breathe(){
-    print("Living thing is breathing");
-  }
-  void move(){
-    print("Moving");
-  }
-}
-//We can inherit the functionality of the livingthing class since cats are livingthings too
-//To do that we inherit from a class using the 'extends' keyword
-class Cat extends Livingthing{//Inheritance
-  
-}
-
-class Person{
+//Looking at factory constructors
+class Cat {
   final String name;
-  final String surname;
-  final int age;
-
-  //We create constructors in dart using the class name
-  Person(this.name,this.surname,this.age);//Created constructor method to create the attribute of each and every instance of the class²
-
-  void printName(){
-    print(name);
-  }
+  Cat(this.name);
 }
 
-void test(){
-  final fluffer = Cat();
-  fluffer.breathe();
-  fluffer.move();
-    }
+void test() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
