@@ -14,22 +14,23 @@ class Cat {
   we prefix the constructor with the factory keyword, start naming the convenience function by prefixing
   it with class name followed by a dot the, curly brackets then return the class witha name contained in it
   factory ClassName.conveniencefunction(){
-    
+
     return ClassName("Name of");
   }  
   */
-  factory Cat.fluffBall(){
-
+  factory Cat.fluffBall() {
     return Cat("fluff Bal");
   }
 }
 
 void test() {
-  final fluffBall = Cat('fluff ball');
-  print(fluffBall.name);//Access the name attribute of the Cat class since it's its instance
-  //Create factory constructor
-  /*This simply means that any class cat with a function called fluffBall*/
-  factory Cat.fluffBall 
+  final cat1 = Cat('foo');
+  final cat2 = Cat('foo');
+  if (cat1 == cat2){
+    print("Those two are equal")
+  }else{
+    print("They are not equal");
+  }
 }
 
 class MyApp extends StatelessWidget {
