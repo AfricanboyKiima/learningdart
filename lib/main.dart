@@ -4,13 +4,33 @@ void main() {
   runApp(const MyApp());
 }
 
-//Looking at factory constructors
+//Looking at factory constructors. They are used to instantiate objects very fast by the way
 class Cat {
   final String name;
   Cat(this.name);
+
+  //Create factory constructor which is a way of constructing instances using convinience functions
+  /*syntax is as follows
+  we prefix the constructor with the factory keyword, start naming the convenience function by prefixing
+  it with class name followed by a dot the, curly brackets then return the class witha name contained in it
+  factory ClassName.conveniencefunction(){
+    
+    return ClassName("Name of");
+  }  
+  */
+  factory Cat.fluffBall(){
+
+    return Cat("fluff Bal");
+  }
 }
 
-void test() {}
+void test() {
+  final fluffBall = Cat('fluff ball');
+  print(fluffBall.name);//Access the name attribute of the Cat class since it's its instance
+  //Create factory constructor
+  /*This simply means that any class cat with a function called fluffBall*/
+  factory Cat.fluffBall 
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
