@@ -3,21 +3,14 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-//Sets do not have duplicate values 
-void test(){
-  //This set is composed of integers only that cant be duplicated
-  var integers = {1,2};
-  integers;
-  //Set of objects, this is because it is composed of different elements of various data types
-  var objects = {"Kiima",1,2.0};
-  objects;
-  //Set of strings
-  var strings = {"fadhil","Kiima"};
-  strings;
-  //Set of floating point numbers
-  var test_floats = {2.3,5.7};
-  test_floats;
+
+//Looking at factory constructors
+class Cat {
+  final String name;
+  Cat(this.name);
 }
+
+void test() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
