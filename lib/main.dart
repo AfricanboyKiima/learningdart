@@ -21,14 +21,26 @@ class Cat {
   factory Cat.fluffBall() {
     return Cat("fluff Bal");
   }
+  /*In those cases where we instantiate objects having the same values and we want them to be considered
+  as equal we have to override(change) the functionality of the == sign in the class level*
+  Now one thing we ought to understand is that every class we create is inherited from the object class,
+  this class has a number of stuff it defines i.e our operator == in this case, which actually returns
+  a boolean,true or false*
+  With the implementations we've defined here, each instance having the same value in terms of name
+  will have a unique way of identifying it within collections such as maps and sets
+   */
+  @override
+  bool operator ==(covariant Cat other) => other.name == name;
+  @override
+  int get hashCode => name.hashCode;
 }
 
 void test() {
   final cat1 = Cat('foo');
   final cat2 = Cat('foo');
-  if (cat1 == cat2){
-    print("Those two are equal")
-  }else{
+  if (cat1 == cat2) {
+    print("Those two are equal");
+  } else {
     print("They are not equal");
   }
 }
