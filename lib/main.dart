@@ -21,6 +21,24 @@ extension Run on Cat {
   }
 }
 
+class Person {
+  //Field definition
+  final String firstName;
+  final String lastName;
+
+  //Assign attributes to object using constructor
+  Person(this.firstName, this.lastName);
+}
+
+/*We use extensions to extend the functionality of a given class normally when we know
+that we want to add a functionality that we believe isn't of the class and these are very very important in
+dart
+*/
+
+extension FullName on Person {
+  String get fullName => "$firstName $lastName";
+}
+
 void test() {
   final meow = Cat('Fluffers');
   print(meow.name);
