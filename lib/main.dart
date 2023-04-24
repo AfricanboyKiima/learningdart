@@ -10,6 +10,11 @@ class Cat {
   Cat(this.name);
 }
 
+/*Extensions are a great feature in dart, they allow us to add functionality to an existing class
+by extending it through adding a functionality. Extensions are mainly used as programmers when we believe
+that a specific functionality does not belong to a class, they have their limitations however that
+we shall master as we continue to use dart
+*/
 extension Run on Cat {
   void run() {
     print("Cat $name is running");
