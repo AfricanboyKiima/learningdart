@@ -4,13 +4,45 @@ void main() {
   runApp(const MyApp());
 }
 
-//Looking at factory constructors
+//Looking at factory constructors. They are used to instantiate objects very fast by the way
 class Cat {
   final String name;
   Cat(this.name);
 }
 
-void test() {}
+/*Extensions are a great feature in dart, they allow us to add functionality to an existing class
+by extending it through adding a functionality. Extensions are mainly used as programmers when we believe
+that a specific functionality does not belong to a class, they have their limitations however that
+we shall master as we continue to use dart
+*/
+extension Run on Cat {
+  void run() {
+    print("Cat $name is running");
+  }
+}
+
+class Person {
+  //Field definition
+  final String firstName;
+  final String lastName;
+
+  //Assign attributes to object using constructor
+  Person(this.firstName, this.lastName);
+}
+
+/*We use extensions to extend the functionality of a given class normally when we know
+that we want to add a functionality that we believe isn't of the class and these are very very important in
+dart
+*/
+
+extension FullName on Person {
+  String get fullName => "$firstName $lastName";
+}
+
+void test() {
+  final meow = Cat('Fluffers');
+  print(meow.name);
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
