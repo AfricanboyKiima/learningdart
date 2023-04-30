@@ -4,6 +4,15 @@ void main() {
   runApp(const MyApp());
 }
 
+//This future takes 55 seconds before it can concatenate one's name, this is called asynchronous programming
+Future<String> concatenateMyName(
+    String firstName, String middleName, String lastName) {
+  return Future.delayed(const Duration(seconds: 55), () {
+    String response = "$firstName $middleName $lastName";
+    return response;
+  });
+}
+
 Future<int> mutliplyEachByTwo(int a) {
   return Future.delayed(const Duration(seconds: 3), () {
     return a * 2;
