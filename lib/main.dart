@@ -26,6 +26,9 @@ void test() async {
   final result = await multiplyEachByTwo(
       2); //Prefix our asynchronous function with await so it returns required results
   print(result);
+
+  final result2 = await concatenateMyName('Kiima', 'Samuel', 'Fadhil');
+  print(result2);
 }
 
 class MyApp extends StatelessWidget {
