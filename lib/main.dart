@@ -4,32 +4,17 @@ void main() {
   runApp(const MyApp());
 }
 
-//This future takes 55 seconds before it can concatenate one's name, this is called asynchronous programming
-Future<String> concatenateMyName(
-    String firstName, String middleName, String lastName) {
-  return Future.delayed(const Duration(seconds: 55), () {
-    String response = "$firstName $middleName $lastName";
-    return response;
-  });
-}
-
-//Function to perform asynchronous task
-Future<int> multiplyEachByTwo(int a) {
-  return Future.delayed(const Duration(seconds: 3), () {
-    return a * 2;
-  });
-}
-
-//Looking at how asynchronous programming is done in dart using async,await and Future
-void test() async {
-  //Suffix our function with the async keyword to be able to call asynchronous functions
-  final result = await multiplyEachByTwo(
-      2); //Prefix our asynchronous function with await so it returns required results
-  print(result);
-
-  final result2 = await concatenateMyName('Kiima', 'Samuel', 'Fadhil');
-  print(result2);
-}
+//Started to look at streams
+//A stream is an asynchronous 'pipe' of data
+/*
+A stream, compared to a future, continues to have a flow of data going through it.
+We've been told that we shall apply asynchronous behaviour to both our client and server apps however when
+it comes to streams,they definately are asynchronous just like futures except that when we run a stream,
+there continues to be a continous flow of data through. Unlike futures that just return results after
+asynchronously controlling of flow of data in a specific duration, streams on the other hand continue to
+have a flow of data through them.
+*/
+void test() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
