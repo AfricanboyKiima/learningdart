@@ -19,7 +19,7 @@ Future<int> mutliplyEachByTwo(int a) {
   });
 }
 
-void test() {}
+void test() async {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
