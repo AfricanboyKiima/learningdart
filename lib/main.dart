@@ -13,13 +13,20 @@ Future<String> concatenateMyName(
   });
 }
 
-Future<int> mutliplyEachByTwo(int a) {
+//Function to perform asynchronous task
+Future<int> multiplyEachByTwo(int a) {
   return Future.delayed(const Duration(seconds: 3), () {
     return a * 2;
   });
 }
 
-void test() async {}
+//Looking at how asynchronous programming is done in dart using async,await and Future
+void test() async {
+  //Suffix our function with the async keyword to be able to call asynchronous functions
+  final result = await multiplyEachByTwo(
+      2); //Prefix our asynchronous function with await so it returns required results
+  print(result);
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
