@@ -4,17 +4,18 @@ void main() {
   runApp(const MyApp());
 }
 
-//Started to look at streams
-//A stream is an asynchronous 'pipe' of data
-/*
-A stream, compared to a future, continues to have a flow of data going through it.
-We've been told that we shall apply asynchronous behaviour to both our client and server apps however when
-it comes to streams,they definately are asynchronous just like futures except that when we run a stream,
-there continues to be a continous flow of data through. Unlike futures that just return results after
-asynchronously controlling of flow of data in a specific duration, streams on the other hand continue to
-have a flow of data through them.
-*/
-void test() {}
+/*Streams are an asynchronous pipe of data*/
+Stream<String> getNamee() {
+  return Stream.periodic(const Duration(seconds: 1), (val) {
+    return 'foo';
+  });
+}
+
+void test() async {
+  await for (final val in getNamee()) {
+    print(val);
+  }
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
