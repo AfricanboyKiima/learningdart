@@ -12,9 +12,27 @@ of food prepared that can be taken away, that particular package is called a lis
 Iterables on the otherhand are a list of things that get calculated on the go, on the fly.
 */
 
+//An asynchronous generator
 Stream<Iterable<int>> getOneTwoThree() async* {}
 
-void test() {}
+/*A synchronous generator
+We dont just return a bunch of things when dealing with synchronous generators,we carry out some computing
+using a keyword known as yield
+*/
+Iterable<int> getOneTwoThreee() sync* {
+  yield 1; //This simply means that the first value you're outputing in my iterable is the value 1
+  yield 2; //Second simply means the second value we're outputing is 2
+  yield 3; //Third value we're outputing is 3
+}
+
+void test() {
+  for (final value in getOneTwoThreee()) {
+    print(value);
+    if (value == 2) {
+      break;
+    }
+  }
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
