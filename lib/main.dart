@@ -12,7 +12,7 @@ of food prepared that can be taken away, that particular package is called a lis
 Iterables on the otherhand are a list of things that get calculated on the go, on the fly.
 */
 
-Iterable<int> getOneTwoThree() sync* {}
+Stream<Iterable<int>> getOneTwoThree() async* {}
 
 void test() {}
 
