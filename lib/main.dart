@@ -3,19 +3,18 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+//GENERATORS
+//A function that returns a list of things, to mark a function as a generator, we suffix it with sync*
+//These returned things can be calculated in a very simple way
+/*
+Lists are a package, an example is like when we go to a supermarket,we find an already existing package
+of food prepared that can be taken away, that particular package is called a list.
+Iterables on the otherhand are a list of things that get calculated on the go, on the fly.
+*/
 
-/*Streams are an asynchronous pipe of data*/
-Stream<String> getNamee() {
-  return Stream.periodic(const Duration(seconds: 1), (val) {
-    return 'foo';
-  });
-}
+Iterable<int> getOneTwoThree() sync* {}
 
-void test() async {
-  await for (final val in getNamee()) {
-    print(val);
-  }
-}
+void test() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
